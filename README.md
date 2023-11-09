@@ -1,4 +1,9 @@
-****Deployment Link: https://breweryapp-kiranbawane.netlify.app/search ****
+***Deployment Link****: https://breweryapp-kiranbawane.netlify.app/search 
+
+
+**Demo**
+![image](https://github.com/kiranbawane48/Brewery_App_Assignment/assets/100428197/9c53dfcd-d8fc-4148-8f36-eadca209234e)
+
 Step 1 --> json-server --watch data/db.json --port 8000
 
 
