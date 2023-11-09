@@ -1,0 +1,35 @@
+/* Card.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .brewery-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .brewery-type {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .brewery-website a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .brewery-website a:hover {
+    text-decoration: underline;
+  }
+  

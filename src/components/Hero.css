@@ -1,0 +1,46 @@
+/* Add your CSS styles to your stylesheet */
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    /* background-color:#AEDFF7; */
+    color:#0c0505; 
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .text {
+    max-width: 400px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#0058a2; 
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0074E4; 
+  }
+  
+  .hero-image {
+    flex: 1;
+  }
+  
+  .hero-image img {
+    width: 80%; /* Adjust the image width as needed */
+    border-radius: 10px;
+    
+  }
+  
+  
