@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
-import "./Header.css"; // Import the CSS file
+import "./Header.css";
+import Search from "./Search";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,14 +16,19 @@ const Header = () => {
 
   const handleSearch = async () => {
     try {
-      // Make an API request to fetch search results based on the 'searchTerm'
-      const response = await fetch(`/api/search?term=${searchTerm}`);
-      if (response.ok) {
-        const data = await response.json();
-        setSearchResults(data);
-      }
+      const data = await fetchData();
+      setSearchResults(data);
     } catch (error) {
       console.error("Error searching:", error);
+    }
+  };
+
+  const fetchData = async () => {
+    const response = await fetch(`/api/search?term=${searchTerm}`);
+    if (response.ok) {
+      return await response.json();
+    } else {
+      throw new Error("Failed to fetch data");
     }
   };
 
@@ -34,45 +40,35 @@ const Header = () => {
           <span>Brewery App</span>
         </Link>
         <div className="icons">
-          <span
-            className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-gear-wide-connected"></span>
+          <span className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-gear-wide-connected"></span>
           <span
             className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-search"
             onClick={() => setSearchSection(!searchSection)}
           ></span>
-          <span className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark-text" onClick={toggleDropdown}></span>
-          {/* Dropdown menu */}
-          {isDropdownOpen && (
+          <span
+            className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark-text"
+            onClick={toggleDropdown}
+          ></span>
+
+          {isDropdownOpen ? (
             <div className="dropdown-menu">
               <ul>
                 <li>
-                  <a href="/allcities">All Cities</a>
+                  <Link to="/cities">All Cities</Link>
                 </li>
                 <li>
-                  <a href="/register">Register</a>
+                  <Link to="/register">Register</Link>
                 </li>
                 <li>
-                  <a href="/login">Login</a>
+                  <Link to="/login">Login</Link>
                 </li>
               </ul>
             </div>
-          )}
+          ) : null}
         </div>
       </nav>
 
-      {/* Display search input and button when searchSection is true */}
-      {/* Display search input and button when searchSection is true */}
-{searchSection && (
-  <div className="search-bar">
-    <input
-      type="text"
-      placeholder="Search by city, name, or type"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-    <button onClick={handleSearch}>Search</button> {/* Handle the search on button click */}
-  </div>
-)}
+      {searchSection && <Search />}
     </header>
   );
 };

@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "email": "kiranbawane@gmail.com",
+      "password": "$2a$10$w32YqZ5AUfA0MxxwQ6D6yO4AJqgWyG0ftCyn3aX58f.bpo8sY1Dda",
+      "id": 1
+    },
+    {
+      "email": "kiranbawane@gmail.com",
+      "password": "$2a$10$3a.ldmCqQ1DtakLT.8XrZe3JdKi7p7Hi.G8h.9G3w6XQyVSo6bi42",
+      "id": 2
+    },
+    {
+      "email": "kiranbawane0868@gmail.com",
+      "password": "$2a$10$4vYYS3cdSEUxNzlVD2WnauyneQdw0oNxcKCG9A2xOYsNcFCKDlRsS",
+      "id": 3
+    },
+    {
+      "email": "kiranbawane0868@gmail.com",
+      "password": "$2a$10$XqCOA9RqVAiu1t6HZl4rqOROdwAud3C3EN3ompZAVfYSGn147Das.",
+      "id": 4
+    },
+    {
+      "email": "kiran@example.com",
+      "password": "$2a$10$LxiCPdefmkuva2v0qlKwYON6zch8vX/Vcih1vR/A66sQPq03KqM22",
+      "id": 5
+    },
+    {
+      "email": "Kiran@example.com",
+      "password": "$2a$10$lY1.DWwUUPsy.vGAbjtr8OHPOE5tpWH0DrgtM5n4TnKZCWeaKylVC",
+      "id": 6
+    },
+    {
+      "email": "kiran@example.com",
+      "password": "Kiran@123#",
+      "datumId": "db",
+      "id": 7
+    },
+    {
+      "email": "kiranbawane@gmail.com",
+      "password": "kirnnb2",
+      "datumId": "db",
+      "id": 8
+    },
+    {
+      "email": "kittu@gmail.com",
+      "password": "1234",
+      "datumId": "db",
+      "id": 9
+    }
+  ]
+}

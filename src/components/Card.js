@@ -4,16 +4,15 @@ import "./Card.css";
 
 const Card = ({ brewery }) => {
   return (
-    <div className="card">
-      <h3 className="brewery-name">{brewery.name}</h3>
-      <p className="brewery-type">{brewery.brewery_type}</p>
-      <p className="brewery-address">{brewery.address_1}</p>
-      <p className="brewery-city">{brewery.city}, {brewery.state_province}</p>
+    <div key={brewery.id} className="card">
+      <h3>{brewery.name}</h3>
+      <p>{brewery.brewery_type}</p>
+      <p >{brewery.address_1}</p>
+      <p>name: {brewery.city}, state: {brewery.state_province}</p>
       <p className="brewery-country">{brewery.country}</p>
-      <p className="brewery-website">
-        <a href={brewery.website_url} target="_blank" rel="noopener noreferrer">
-          Visit Website
-        </a>
+      <p>Phone: {brewery.phone}</p>
+      <p>
+        Website: <a href={brewery.website_url}>{brewery.website_url}</a>
       </p>
     </div>
   );

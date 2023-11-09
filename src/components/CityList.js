@@ -21,13 +21,14 @@ export const CityList = () => {
           </span>
         </div>
 
-        <div className="flex flex-wrap justify-center lg:flex-row">
-          {cities.map((city, index) => (
-            <div key={index} className="city-card">
-              {city}
-            </div>
-          ))}
+        <div className="flex flex-wrap justify-center sm:flex-row flex-col">
+      {cities.map((city, index) => (
+        <div key={index} className="city-card" style={{ marginBottom: "20px" }}>
+          City: {city }
         </div>
+      ))}
+    </div>
+
       </section>
     </main>
   );

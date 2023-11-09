@@ -3,8 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Register from "../components/Register";
 import Login from "../components/Login";
-import Card from "../components/Card";
+import Search from "../components/Search";
 import { CityList } from '../components/CityList';
+import BreweryDetail from '../components/BreweryDetail';
+
 
 function AllRoutes() {
   return (
@@ -13,8 +15,8 @@ function AllRoutes() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/cities" element={<CityList />} />
-      <Route path="/search" element={<Card />} />
-      
+      <Route path="/search" element={<Search />} />
+      <Route path="/brewery/:id" component={<BreweryDetail />} />
     </Routes>
   );
 }
