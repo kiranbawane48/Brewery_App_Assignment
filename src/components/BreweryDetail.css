@@ -1,0 +1,39 @@
+/* BreweryDetail.css */
+
+.brewery-detail-box {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-review-section {
+    margin-top: 20px;
+  }
+  
+  .review-textarea {
+    width: calc(100% - 22px); 
+    height: 100px;
+    margin-top: 10px;
+    border: 1px solid #000; 
+    padding: 5px; 
+  }
+  
+  .submit-review-button {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-review-button:hover {
+    background-color: #0074E4;
+  }
+  
+  .existing-reviews-section {
+    margin-top: 20px;
+  }
+  

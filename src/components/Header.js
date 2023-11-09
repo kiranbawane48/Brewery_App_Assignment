@@ -41,10 +41,7 @@ const Header = () => {
         </Link>
         <div className="icons">
           <span className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-gear-wide-connected"></span>
-          <span
-            className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-search"
-            onClick={() => setSearchSection(!searchSection)}
-          ></span>
+          <Link to="/search" className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-search"></Link>
           <span
             className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark-text"
             onClick={toggleDropdown}

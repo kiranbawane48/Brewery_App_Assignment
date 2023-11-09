@@ -1,3 +1,4 @@
+// AllRoutes.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'; 
 import Home from '../pages/Home';
@@ -7,7 +8,6 @@ import Search from "../components/Search";
 import { CityList } from '../components/CityList';
 import BreweryDetail from '../components/BreweryDetail';
 
-
 function AllRoutes() {
   return (
     <Routes>
@@ -16,7 +16,7 @@ function AllRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/cities" element={<CityList />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/brewery/:id" component={<BreweryDetail />} />
+      <Route path="/brewery/:id" element={<BreweryDetail />} />
     </Routes>
   );
 }
