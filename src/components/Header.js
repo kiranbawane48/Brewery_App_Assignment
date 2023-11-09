@@ -9,7 +9,8 @@ const Header = () => {
   const [searchSection, setSearchSection] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-
+  
+ console.log(setSearchTerm,setSearchSection,searchResults);
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
@@ -22,9 +23,11 @@ const Header = () => {
       console.error("Error searching:", error);
     }
   };
+console.log(handleSearch());
 
   const fetchData = async () => {
-    const response = await fetch(`/api/search?term=${searchTerm}`);
+    const response = await 
+    fetch(`/api/search?term=${searchTerm}`);
     if (response.ok) {
       return await response.json();
     } else {
@@ -41,7 +44,10 @@ const Header = () => {
         </Link>
         <div className="icons">
           <span className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-gear-wide-connected"></span>
-          <Link to="/search" className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-search"></Link>
+          <Link
+            to="/search"
+            className="cursor-pointer text-xl text-gray-700 dark-text mr-5 bi bi-search"
+          ></Link>
           <span
             className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark-text"
             onClick={toggleDropdown}

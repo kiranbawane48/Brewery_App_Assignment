@@ -6,11 +6,11 @@ import './BreweryDetail.css'; // Import the CSS file
 function BreweryDetail() {
   const [reviewRating, setReviewRating] = useState(1);
   const [reviewText, setReviewText] = useState('');
-  const [reviews, setReviews] = useState([]);
+  // const [reviews, setReviews] = useState([]);
 
   const addReview = () => {
-    // Implement logic to add a review (including rating and text) to the state.
-    // You'll later save this data to your database.
+    // Implement logic to add a review 
+    //  save this data to your database.
   };
 
   return (
